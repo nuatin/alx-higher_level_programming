@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""
-Contains the function "wrtie_file"
-"""
+'''
+Module for JSON serialization
+'''
 
 
-def write_file(filename="", text=""):
-    """returns the number of chars written to "filename" from "text" """
-    with open(filename, 'w', encoding='utf=8') as f:
-        return f.write(text)
+def class_to_json(obj):
+    ''' Returns dictionary description with data list '''
+    return obj.__dict__
